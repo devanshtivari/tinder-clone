@@ -1,6 +1,15 @@
-.card{
-    position: relative;
-    background-color: #fff;
-    width: 600px;
-    padding: 20px;
+.card_container{
+    width: 340px !important;
+    height: 510px !important;
+    border-radius: 20px !important;
+    box-shadow: 8px 8px #a9a2a23a;
+}
+.container{
+    height: 650px;
+}
+.details{
+    margin-top: 420px;
+    margin-left: 30px;
+    font-family: 'Telex', sans-serif;
+    color: rgb(255, 255, 255);
 }
