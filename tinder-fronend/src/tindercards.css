@@ -5,7 +5,8 @@
     box-shadow: 8px 8px #a9a2a23a;
 }
 .container{
-    height: 650px;
+    margin-top: 10px;
+    height: 550px;
 }
 .details{
     margin-top: 420px;
