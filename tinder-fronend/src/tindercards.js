@@ -13,33 +13,9 @@ export default class Tindercards extends Component {
   }
 
   renderCards() {
-    let people = [
-      {
-        name: "Daniel Travard",
-        url: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-        info: "Sales Chairman at Linkedin",
-      },
-      {
-        name: "Scott Wilson",
-        url: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        info: "CEO at Redbus",
-      },
-      {
-        name: "Elisa Marc",
-        url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        info: "President at Airtel ",
-      },
-      {
-        name: "Nicholas",
-        url: "https://images.unsplash.com/photo-1543132220-3ec99c6094dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        info: "Senior Software Engineer at Google",
-      },
-      {
-        name: "Elison White",
-        url: "https://images.unsplash.com/photo-1508835277982-1c1b0e205603?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        info: "Engineer at Microsoft",
-      },
-    ];
+    const [people,setpeople] = React.useState([]);
+
+    
 
     return people.map((p) => {
       return (
