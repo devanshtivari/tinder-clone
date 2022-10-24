@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { render } from "react-dom";
 import { Card, CardWrapper } from "react-swipeable-cards";
-import "./tindercards.css"
+import "./tindercards.css";
+import axios from "./axios";
 
 export default class Tindercards extends Component {
   handleLeftSwipe(data){
@@ -15,7 +16,15 @@ export default class Tindercards extends Component {
   renderCards() {
     const [people,setpeople] = React.useState([]);
 
-    
+    React.useEffect(() => {
+      async function fetchData(){
+        const req = await axios.get('/tinder/card');
+        setpeople(req.data)
+      }
+
+      fetchData();
+    } , [])
+
 
     return people.map((p) => {
       return (

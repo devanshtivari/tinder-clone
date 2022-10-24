@@ -2,9 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const Cards = require('./dbschema');
 const cors = require('cors');
+require("dotenv").config();
 const app = express();
-const connect_uri =
-  "mongodb+srv://devanshtivari:devansh01@cluster0.icpzm.mongodb.net/tinder-clone?retryWrites=true&w=majority";
+const connect_uri = process.env.MONGO_URI;
 
 mongoose.connect(connect_uri , {
     useNewUrlParser: true,
