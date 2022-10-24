@@ -5,6 +5,20 @@ import "./tindercards.css";
 import axios from "./axios";
 
 export default class Tindercards extends Component {
+
+  constructor(){
+    super();
+    this.state={
+      people : []
+    };
+  }
+
+  async componentDidMount(){
+    let req = await axios.get("/tinder/card");
+    console.log(req.data)
+    this.setState({people : req.data})
+  }
+
   handleLeftSwipe(data){
     console.log(data.name+" was left swiped")
   }
@@ -12,21 +26,10 @@ export default class Tindercards extends Component {
   handleRightSwipe(data){
     console.log(data.name+" was right swiped")
   }
+  
 
   renderCards() {
-    const [people,setpeople] = React.useState([]);
-
-    React.useEffect(() => {
-      async function fetchData(){
-        const req = await axios.get('/tinder/card');
-        setpeople(req.data)
-      }
-
-      fetchData();
-    } , [])
-
-
-    return people.map((p) => {
+    return this.state.people.map((p) => {
       return (
         <Card
           className="card"
